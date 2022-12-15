@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  grafana:
+    container_name: grafana
+    build: ./grafana
+    ports:
+      - '3000:3000'
+    networks:
+      - backend
+
+  prometheus:
+    container_name: prometheus
+    build: ./prometheus
+    ports:
+      - '9090:9090'
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: agropix
