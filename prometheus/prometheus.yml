@@ -3,7 +3,7 @@ global:
   scrape_timeout: '10s'
   evaluation_interval: '1m'
 scrape_configs:
-  - job_name: 'job-exemplo'
+  - job_name: 'agropix'
     metrics_path: /actuator/prometheus
     honor_labels: false
     honor_timestamps: true
@@ -18,3 +18,4 @@ scrape_configs:
     static_configs:
       - targets:
           - 'bacen:5000'
+          - 'itau:5000'
