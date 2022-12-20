@@ -19,3 +19,4 @@ scrape_configs:
       - targets:
           - 'bacen:5000'
           - 'itau:5000'
+          - 'ada:5000'
